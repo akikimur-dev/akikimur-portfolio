@@ -2,45 +2,92 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<meta property='og:type' content='website'>
+<meta property='og:title' content='akikimur ポートフォリオ'>
+<meta property='og:url' content=''>
+<meta property='og:description' content='akikimurのポートフォリオです。'>
+<meta property="og:image" content="./img/profile2.jpg">
+<meta name="description" content="akikimurのポートフォリオです。" />
 <link rel="stylesheet" href="./css/reset.css" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css" type="text/css" />
 <title>akikimurのポートフォリオサイト</title>
 </head>
 <body>
 <header class="Header">
-  <h1 class="Header__title">Web Enginner akikimur portfolio ...</h1>
-  <!-- <img class="Header__img"src="https://placehold.jp/900x450.png" alt="akikimurイメージ画像"> -->
+  <h1 class="Header__title">Web Enginner akikimur portfolio</h1>
 </header>
 <nav class="Navigation">
   <div class="Navigation__Inner">
     <ul class="Navigation__Inner-Bar">
-      <li><a class="Navigation__Inner-Link" href="">自己紹介</a></li>
-      <li><a class="Navigation__Inner-Link" href="">スキル</a></li>
-      <li><a class="Navigation__Inner-Link" href="">キャリア</a></li>
+      <li><a class="Navigation__Inner-Link" href="#profile">自己紹介</a></li>
+      <li><a class="Navigation__Inner-Link" href="#skill">スキル</a></li>
+      <li><a class="Navigation__Inner-Link" href="#product">プロダクト</a></li>
+      <li><a class="Navigation__Inner-Link" href="#contact">コンタクト</a></li>
     </ul>
   </div>
 </nav>
 <main class="MainContent">
-  <section class="Profile">
-    <h1 class="Profile-title">My Profile</h1>
+  <section class="Profile" id="profile">
+    <h1 class="Profile-title Title">自己紹介</h1>
     <div class="Profile__Content">
       <img class="Profile__Content-image" src="./img/profile2.jpg" alt="akikimurの自画像">
-      <p class="Profile__Content-MeinText">
-        社会人歴7年目(2013年入社)の @akikimur と申します。FEエンジニアとして働いております。
-        
+      <p class="Profile__Content-MainText">
+        7年目(2013年入社)の <a href="https://twitter.com/kimukimu_dev">@akikimur</a> と申します。webサービスを開発する会社にてFEエンジニアとして働いております。<br />
+        有料会員向けの特典などを提供するサービスのPHPでフロントとAPIを開発しております。<br />
+        最近ではNuxt.jsやVue.jsを使いシステムを一新したりするなどモダンなサービス作りに従事しております。
       </p>
     </div>
   </section>
-  <section class="Skill">
-    <h1>My Skill</h1>
-    <p>有料会員向けに特典を提供するサービスのwebサイトの開発をおこなっていたため、PHPやnodeなどのFE周りの言語を</p>
-    <ul>
-      <li>PHP (3~4年ほど))</li>
-      <li>node.js</li>
-      <li>Vue.js / Nuxt.js</li>
-      <li>HTML, CSS</li>
-    </ul>
+  <section class="Skill" id="skill">
+    <h1 class="Skill-title Title">スキル</h1>
+    <div class="Skill__Inner">
+      <div class="Skill__introduction">
+        <p>
+          有料会員向けに特典を提供するサービスのwebサイトの開発をおこなっていたため、PHPやnodeなどのFE周りの言語を主に触ることが多いです。<br>
+        </p>
+        <ul class="Skill__about">
+          <li>PHP (3~4年ほど))</li>
+          <li>node.js</li>
+          <li>Vue.js / Nuxt.js</li>
+          <li>HTML, CSS</li>
+        </ul>
+      </div>
+      <div class="Skill__list">
+        <div class="Skill__item">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="Product" id="product">
+    <h1 class="Product-title Title">プロダクト</h1>
+    <div class="Product__Inner">
+      <div class="Product__introduction">
+        <p>
+          私が過去に携わったプロダクトの紹介をします。
+        </p>
+      </div>
+      <!-- item -->
+      <div class="Product__list">
+        <div class="Product__list-item">
+          <dl>
+            <dt>ポートフォリオサイト</dt>
+            <dd><img src="./img/product1.png" alt="ポートフォリサイトのイメージ画像" /></dd>
+            <dd>私キャリアやスキルを紹介するサイトを作成</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="Contact" id="contact">
+    <h1 class="Contact-title Title">コンタクト</h1>
+    <div class="Contact__Inner">
+      <p>
+       連絡はTwetterのDMでおねがいします！
+      </p>
+    </div>
   </section>
 </main>
 <footer>

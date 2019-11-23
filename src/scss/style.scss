@@ -1,14 +1,33 @@
+@charset "UTF-8";
+
+$basecolor: #2C5379;
+$subcolor: #7C858E;
+$darkcolor: #003c8f;
+$fontcolor: white;
+
+$contentcolor: white;
+$sectioncolor: white;
+
+$backcolor: #E1E2E1;
+
+$basefontsize: 1.2rem;
+$titlefontsize: 1.8rem;
+
 html {
-  font-size: 62.5%;
+  font-size: 15px;
 }
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
-  background: #E1E2E1;
-  font-family: "M PLUS Rounded 1c";
-  font-size: 1.4rem;
+  background: $backcolor;
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: $basefontsize;
+}
+
+a {
+  text-decoration: none;
 }
 
 /**list-styleを指定する**/
@@ -20,32 +39,39 @@ ul{
   width:  100%;
   height: 300px;
   display: flex;
-  background: -moz-linear-gradient(top, #FFC778, #FFF);
-  background: -webkit-linear-gradient(top, #FFC778, #FFF);
-  background: linear-gradient(to bottom, #FFC778, #FFF);
-  flex-direction: column;
-  margin: 0 auto;
-  text-align: center;
+  background-color: $basecolor;
   &__title {
-    margin: 100px 30px;
-    font-size: 2.5em;
+    padding-top: 100px;
     font-weight: bold;
-    color: white;
-    position: absolute;
+    color: $fontcolor;
+    margin: 0 auto;
+    font-size: 3rem;
+    &::before {
+      content:"";
+      display:block;
+      width: 100%;
+      height: 1px;
+      margin :10px auto;
+      padding: 1px;
+      background-color: $fontcolor;
+    }
+    &::after{
+      content:"";
+      display:block;
+      width: 100%;
+      height: 1px;
+      margin :10px auto;
+      padding: 1px;
+      background-color: $fontcolor;
+    }
   }
-  // &__img {
-  //   width: 900px;
-  //   height: 450px;
-  //   margin: 0 auto;
-  // }
 }
 
 .Navigation {
   width: 100%;
   display:flex;
-  background-color: #6ec6ff;
+  background-color: $subcolor;
   &__Inner {
-    width: 900px;
     margin: 0 auto;
     &-Bar {
       display: flex;
@@ -60,12 +86,11 @@ ul{
       display: block;
       border-radius: 4px;
       padding: 12px 24px;
-      width: 250px;
-      color: white;
+      color: $fontcolor;
       margin: 0 auto;
-      text-decoration: none;
       justify-content: center;
       transition: background-color .5s;
+      font-size: $titlefontsize;
       &:hover {
         opacity: 0.5;
         background-color: #0069c0;
@@ -75,50 +100,165 @@ ul{
 }
 
 .MainContent {
-  background: #F5F5F6;
   margin: 0 auto;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
 }
 
+.Title {
+  padding: 0.3em;/*文字周りの余白*/
+  color: $subcolor;
+  font-size: $titlefontsize;
+  border-bottom: solid 3px #cce4ff;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 3px #5472cd;
+    bottom: -3px;
+    width: 20%;
+  }
+}
+
 .Profile {
+  border-radius: 15px;
   display: flex;
   flex-flow: column;
-  margin: 10px;
-  width: 850px;
-  &-title {
-    background-color: #6ec5ff;
-    padding: 0.5em;/*文字周りの余白*/
-    color: white;
-    border-left: solid 5px #0068bf;/*左線（実線 太さ 色）*/
+  margin: 10px 0px;
+  width: 100%;
+  background-color: $sectioncolor;
+  &__Inner {
+    padding: 10px;
   }
   &__Content {
-    padding: 1px;
+    padding: 10px;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     &-image {
       display: block;
-      border-radius: 50px;
-      height: 100px;
-      width: 100px;
+      margin: 0 auto;
+      border-radius: 200px;
+      height: 150px;
+      width: 150px;
+      padding: 10px;
     }
     &-MainText {
-      font-weight: bold;
+      padding: 10px 10px;
+      margin: 2em 0;
+      color: $basecolor;
+      background: #FFF;
+      border: solid 2px #6091d3;
+      border-radius: 10px;
     }
   } 
 }
 
 .Skill {
-  margin: 10px;
-  background-color: #6ec6ff;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column;
+  margin: 10px 0px;
+  width: 100%;
+  background-color: $sectioncolor;
+  &__Inner {
+    padding: 10px;
+  }
+  &__introduction {
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+  } 
+  &__about {
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: $basecolor;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+  }
+}
+
+.Product {
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column;
+  margin: 10px 0px;
+  width: 100%;
+  background-color: $sectioncolor;
+  &__Inner {
+    padding: 10px;
+  }
+  &__list {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    max-width: 900px;
+    &-item {
+      border-radius: 10px;
+      background: $subcolor;
+      padding: 15px;
+      margin: 5px;
+      text-align: center;
+      img {
+        max-width: 300px;
+        height: 150px;
+      }
+      p {
+        text-align: left;
+      }
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.Contact {
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column;
+  margin: 10px 0px;
+  width: 100%;
+  background-color: $sectioncolor;
+  &__Inner {
+    padding: 10px;
+  }
 }
 
 footer {
   height: 30px;
+  background-color: $basecolor;
 }
 
 .copyright {
   padding: 5px;
   text-align: center;
+  color: $fontcolor;
+  font-size: $basefontsize;
 }
+
+@media ( max-width : 480px ){
+  .Profile {
+    display: flex;
+    flex-wrap: wrap;
+    &__Content {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+  .Product {
+    display: flex;
+    &__list {
+      flex-flow: column;
+    }
+    width: 100%;
+  }
+  .copyright {
+    font-size: 0.5rem;
+  }
+}
+
