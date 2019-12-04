@@ -4,10 +4,8 @@ $basecolor: #2C5379;
 $subcolor: #7C858E;
 $darkcolor: #003c8f;
 $fontcolor: white;
-
 $contentcolor: white;
 $sectioncolor: white;
-
 $backcolor: #E1E2E1;
 
 $basefontsize: 1.2rem;
@@ -18,6 +16,10 @@ html {
 }
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+p{
+ line-height:20px;
 }
 
 body {
@@ -41,6 +43,13 @@ ul{
   height: 300px;
   display: flex;
   background-color: $basecolor;
+  background-color: #6d695c;
+  overflow: visible !important;
+  background: -webkit-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: -moz-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: -ms-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: -o-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+  background: linear-gradient(45deg, #085078 10%, #85d8ce 90%);
   &__title {
     padding-top: 100px;
     font-weight: bold;
@@ -181,7 +190,7 @@ ul{
     font-weight: bold;
     color: $basecolor;
     background: #FFF;
-    border: solid 3px #6091d3;/*線*/
+    border: solid 2px #6091d3;/*線*/
     border-radius: 10px;/*角の丸み*/
   }
 }
@@ -203,7 +212,6 @@ ul{
     max-width: 900px;
     &-item {
       border-radius: 10px;
-      background: $subcolor;
       padding: 15px;
       margin: 5px;
       text-align: center;
@@ -263,6 +271,12 @@ footer {
   }
   .copyright {
     font-size: 0.5rem;
+  }
+  .Navigation {
+    a {
+      font-size: 0.6rem;
+    }
+    
   }
 }
 

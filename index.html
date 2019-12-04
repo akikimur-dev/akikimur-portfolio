@@ -13,6 +13,9 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css" type="text/css" />
+<link rel="stylesheet" href="./css/uikit.min.css" />
+<script src="./js/uikit.min.js"></script>
+<script src="./js/uikit-icons.min.js"></script>
 <title>akikimurのポートフォリオサイト</title>
 </head>
 <body>
@@ -35,7 +38,7 @@
     <div class="Profile__Content">
       <img class="Profile__Content-image" src="./img/profile2.jpg" alt="akikimurの自画像">
       <p class="Profile__Content-MainText">
-        7年目(2013年入社)の <a href="https://twitter.com/kimukimu_dev">@akikimur</a> と申します。webサービスを開発する会社にてFEエンジニアとして働いております。<br />
+        社会人7年目(2013年入社)の <a href="https://twitter.com/kimukimu_dev">@akikimur</a> と申します。webサービスを開発する会社にてFEエンジニアとして働いております。<br />
         有料会員向けの特典などを提供するサービスのPHPでフロントとAPIを開発しております。<br />
         最近ではNuxt.jsやVue.jsを使いシステムを一新したりするなどモダンなサービス作りに従事しております。
       </p>
@@ -72,13 +75,17 @@
       <!-- item -->
       <div class="Product__list">
         <div class="Product__list-item">
-        <a href="" target="_blank">
-          <dl>
-            <dt>ポートフォリオサイト</dt>
-            <dd><img src="./img/product1.png" alt="ポートフォリサイトのイメージ画像" /></dd>
-            <dd>私キャリアやスキルを紹介するサイトを作成</dd>
-          </dl>
-        </a>
+          <a href="" target="_blank">
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                <img src="./img/product1.png" alt="ポートフォリサイトのイメージ画像" />
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">ポートフォリオサイト</h3>
+                  <p>自己紹介用のサイト</p>
+              </div>
+            </div>        
+          </a>
         </div>
       </div>
     </div>
